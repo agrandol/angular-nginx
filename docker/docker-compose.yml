@@ -1,2 +1,11 @@
 version: "3"
 
+services:
+  reverse-proxy:
+    image: angular-nginx:0.1.0
+    name: angular-nginx-application
+    restart: always
+    ports:
+      - "443:443"
+      - "80:80"
+    network_mode: "host"
