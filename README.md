@@ -16,6 +16,60 @@ Stop the application
 * Stop the application ```npm run proxy:stop```
 
 
+## Development Environment
+The original development environment used to create the application was:
+* Oracle Virtual Box running Linux-Lite 4.x (an Ubuntu variant)
+* npm 6.4.1
+* Node 10.12.0
+* Angular 7.0.1
+* Angular CLI 7.0.3
+* Docker 18.06.1-ce
+* Docker Compose 1.23.0
+
+
+## Installations
+The installations performed to create the environment are described below.
+
+
+### Node / NPM
+```
+wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
+
+sudo apt-get install nodejs
+```
+
+### Angular CLI
+```
+sudo npm install -g @angular/cli
+```
+
+### Docker
+```
+sudo apt-get update
+
+sudo apt-get install     apt-transport-https     ca-certificates     curl     software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) \
+     stable"
+
+sudo apt-get update
+
+sudo apt-get install docker-ce
+```
+
+### Docker Compose
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+
 ---
 
 # AngularNginx
